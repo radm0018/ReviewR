@@ -1,0 +1,52 @@
+header{
+    margin-top: 15px;
+}
+
+.star{
+    color: goldenrod;
+    font-size: 1.0rem;
+    position: relative;
+    padding: 0 0.5rem;
+}
+.star::before{
+    position:absolute;
+    top:0;
+    left:0;
+    content: '\2606';
+    cursor: pointer;
+}
+.star:hover::before{
+    content: '\2605' !important;
+    color: #b000b5;
+}
+.star.rated::before{
+    content: '\2605' !important;
+}
+
+#displayedImage{
+    width: 100px;
+    height: 100px;
+}
+
+#testingID{
+    padding-top: 5px;
+}
+
+#myImage{
+    padding-top: 15px;
+    display: block;
+    margin: 0 auto;
+}
+
+
+#reviewImageDisplay{
+    width: 300px;
+    padding-top: 25px;
+    padding-bottom: 15px;
+    display: block;
+    margin: 0 auto;
+}
+
+#writeReviewContent{
+    padding: 5px;
+}

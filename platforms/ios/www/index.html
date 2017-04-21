@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta http-equiv="Content-Security-Policy" content="default-src 'self' data: gap: https://ssl.gstatic.com http://griffis.edumedia.ca  'unsafe-eval'; style-src 'self' 'unsafe-inline'; media-src *; img-src 'self' data: content: griffis.edumedia.ca  placeholdit.imgix.net placehold.it ;"/>
+        <meta name="format-detection" content="telephone=no"/>
+        <meta name="msapplication-tap-highlight" content="no"/>
+        <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width"/>
+        
+        <link href="css/ratchet.css" rel="stylesheet" />
+        <link rel="stylesheet" type="text/css" href="css/index.css">
+            
+            <title>ReviewR</title>
+            
+            </head>
+    <body>
+        <header class="bar bar-nav">
+            <a class="btn btn-link btn-nav pull-right" href="#writeReview">
+                Write Review
+                <span class="icon icon-compose"></span>
+            </a>
+            <h1 class="title">ReviewR</h1>
+        </header>
+        
+        <div class="content">
+            <ul class="table-view" id="review-list">
+                
+                
+            </ul>
+        </div>
+        
+        <div id="writeReview" class="modal">
+            <header class="bar bar-nav">
+                <a id="xButton" class="icon icon-close pull-right" href="#writeReview"></a>
+                <h1 class="title">Add Review</h1>
+            </header>
+            
+            <div class="content">
+                <div class="content-padded">
+                    <form id="writeReviewContent" class="input-group">
+                        <div class="input-row">
+                            <label>Item:</label>
+                            <input id="itemName" type="text" placeholder="Item"/>
+                        </div>
+                        <div id="testingID" class="input-row">
+                            <label>Rating:</label>
+                            <div class="stars">
+                                <span class="star">&nbsp;</span>
+                                <span class="star">&nbsp;</span>
+                                <span class="star">&nbsp;</span>
+                                <span class="star">&nbsp;</span>
+                                <span class="star">&nbsp;</span>
+                            </div>
+                        </div>
+                        <div>
+                            <img id="myImage"/>
+                        </div>
+                    </form>
+                    
+                    <p class="content-padded">
+                    <button id="pictureBtn" class="btn btn-positive btn-block">
+                        <span class="icon icon-play"></span>
+                        Take Picture
+                    </button>
+                    <button id="cancelBtn" class="btn btn-negative btn-block">
+                        <span class="icon icon-close"></span>
+                        Cancel
+                    </button>
+                    <button id="saveBtn" class="btn btn-primary btn-block">
+                        <span class="icon icon-check"></span>
+                        Save
+                    </button>
+                    </p>
+                </div>
+            </div>
+        </div>
+        
+        <div id="deleteReview" class="modal">
+            <header class="bar bar-nav">
+                <a id="closeDeleteMenu" class="icon icon-close pull-right" href="#deleteReview"></a>
+                <h1 class="title">Current Review</h1>
+            </header>
+            
+            <div class="content">
+                <div>
+                    <img id="reviewImageDisplay"/>
+                </div>
+                <div class="input-row">
+                    <label id="itemNameDisplay">Item:</label>
+                </div>
+                <div id="testingID" class="input-row">
+                    <label>Rating:</label>
+                    <div id="starsCurrent" class="stars">
+                    </div>
+                </div>
+                
+                <p class="content-padded">
+                <button id="deleteBtn" class="btn btn-primary btn-block btn-negative">
+                    <span class="icon icon-check"></span>
+                    Delete
+                </button>
+                </p>
+            </div>
+        </div>
+        </div>
+        
+        <script type="text/javascript" src="cordova.js"></script>
+        <script src="js/ratchet.min.js"></script>
+        <script src="js/index.js"></script>
+    </body>
+</html>
